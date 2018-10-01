@@ -10,7 +10,7 @@
 
 
 - [x] [Java Timer](http://www.baeldung.com/java-timer-and-timertask)
-- [ ] [How to Run a Shell Command in Java](http://www.baeldung.com/run-shell-command-in-java)
+- [x] [How to Run a Shell Command in Java](http://www.baeldung.com/run-shell-command-in-java)
 - [ ] [MD5 Hashing in Java](http://www.baeldung.com/java-md5)
 - [ ] [Guide to Java Reflection](http://www.baeldung.com/java-reflection)
 - [ ] [A Guide to Java Sockets](http://www.baeldung.com/a-guide-to-java-sockets)
@@ -41,7 +41,7 @@
 - [ ] [Java Money and the Currency API](http://www.baeldung.com/java-money-and-currency)
 - [ ] [JVM Log Forging](http://www.baeldung.com/jvm-log-forging)
 - [ ] [Guide to sun.misc.Unsafe](http://www.baeldung.com/java-unsafe)
-- [ ] [How to Perform a Simple HTTP Request in Java](http://www.baeldung.com/java-http-request)
+- [X] [How to Perform a Simple HTTP Request in Java](http://www.baeldung.com/java-http-request)
 - [ ] [Call Methods at Runtime Using Java Reflection](http://www.baeldung.com/java-method-reflection)
 - [ ] [Guide to UUID in JAVA](http://www.baeldung.com/guide-to-uuid-in-java)
 - [ ] [How to Add a Single Element to a Stream](http://www.baeldung.com/java-stream-append-prepend)
