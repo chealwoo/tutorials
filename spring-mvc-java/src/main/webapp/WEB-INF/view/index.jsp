@@ -57,7 +57,7 @@
 	<body>
 	
 		<!--Using @ResponseBody -->
-		<button id="ResponseBody-button">Send AJAX JSON-P request!</button>
+		<button id="ResponseBody-button">My2 Send AJAX JSON-P request!</button>
 
 		<div id="response"></div>
 	

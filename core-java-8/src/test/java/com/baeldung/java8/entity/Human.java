@@ -86,4 +86,12 @@ public class Human {
         return builder.toString();
     }
 
+    private static int doSortingEntitiesByNameThenAge(final Human lhs, final Human rhs)  {
+        if (lhs.getName().equals(rhs.getName())) {
+            return lhs.getAge() - rhs.getAge();
+        } else {
+            return lhs.getName().compareTo(rhs.getName());
+        }
+    }
+
 }
