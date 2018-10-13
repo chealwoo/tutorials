@@ -1,0 +1,9 @@
+{
+  "dataCenters" : [],
+  "components" : [],
+  "clients" : [
+    { "siteId" : 10006092,
+      "siteName" : "Fidelity" }
+  ],
+  "logType" : ["access", "jvm"]
+}
