@@ -23,6 +23,20 @@
 #### security
 
 
+#### Using Resources.getResource
+```
+import com.google.common.io.Resources;
+
+Resources.getResource("lee/jinni/DigitalClock-background.png")
+Resources.getResource("lee/jinni/DigitalClock-background.png").openStream()
+Resources.toString(Resources.getResource("touchsocial/twitter_public_model.json"), StandardCharsets.UTF_8);
+
+Path path = Paths.get(Resources.getResource("abc/storage/file.txt").toURI());
+```
+\([^(]*\.class\.getResource\(".*"\)
+
+
+
 
 
 ### UnitTest
