@@ -36,7 +36,10 @@ Path path = Paths.get(Resources.getResource("abc/storage/file.txt").toURI());
 \([^(]*\.class\.getResource\(".*"\)
 
 
+### Source
+Java8 In Action: package lambdasinaction
 
+java8 lambdas exercises master: package 
 
 
 ### UnitTest
