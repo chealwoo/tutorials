@@ -12,7 +12,6 @@
 
     <artifactId>learn-fx</artifactId>
 
-
     <dependencies>
         <dependency>
             <groupId>org.apache.lucene</groupId>

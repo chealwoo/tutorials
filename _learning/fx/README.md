@@ -1,4 +1,10 @@
 
+### build FX executable with maven
+[https://dzone.com/articles/create-javafx-executables](https://dzone.com/articles/create-javafx-executables)
+[https://stackoverflow.com/search?q=mac+javafx+build+executable](https://stackoverflow.com/search?q=mac+javafx+build+executable)
+[https://mvnrepository.com/artifact/org.bluestemsoftware.open.maven.plugin/launch4j-plugin/1.5.0.0](https://mvnrepository.com/artifact/org.bluestemsoftware.open.maven.plugin/launch4j-plugin/1.5.0.0)
+
+
 2016-02-24 Import Learn JavaFX 8 samples.
 		com.jdojo package contains source code of it.
 
