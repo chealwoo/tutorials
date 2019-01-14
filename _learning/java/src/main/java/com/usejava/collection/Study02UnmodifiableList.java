@@ -1,4 +1,4 @@
-package com.lee.collection;
+package com.usejava.collection;
 
 import java.util.Arrays;
 import java.util.Collections;

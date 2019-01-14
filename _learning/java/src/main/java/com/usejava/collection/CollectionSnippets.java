@@ -1,4 +1,4 @@
-package com.lee.collection;
+package com.usejava.collection;
 
 import com.google.common.collect.ImmutableMap;
 import org.apache.commons.lang3.ArrayUtils;

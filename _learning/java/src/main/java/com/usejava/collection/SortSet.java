@@ -9,7 +9,7 @@
  * <p>
  * has unit test
  */
-package com.lee.collection;
+package com.usejava.collection;
 
 import model.user.User;
 

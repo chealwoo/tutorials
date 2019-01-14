@@ -1,5 +1,12 @@
-package com.lee.collection;
+/*
+ * \$Id$
+ * 
+ * MapTest.java - created on Aug 1, 2011 2:01:01 PM
+ * Copyright (c)2011, Chealwoo Lee (Daniel). All rights reserved. Use is subject to license terms.
+ */
+package com.usejava.collection;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
@@ -9,8 +16,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SetTestPrimObj {
-
+/**
+ * @author dlee
+ *
+ */
+public class MapTest {
+	
 	Map <byte[], byte[]> testMap = null;
 	
 	@Before
@@ -34,4 +45,14 @@ public class SetTestPrimObj {
 		
 	}
 
+	@Test 
+	public void mapGetTest() {
+		
+		Map<String, String> map = new HashMap<String, String> ();
+		
+		String st = map.get("unknown-key");
+		
+		assertNull(st);
+		
+	}
 }

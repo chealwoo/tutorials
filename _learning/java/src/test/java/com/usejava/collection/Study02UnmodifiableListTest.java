@@ -1,4 +1,4 @@
-package com.lee.collection;
+package com.usejava.collection;
 
 import com.google.common.collect.ImmutableList;
 import org.apache.commons.collections.ListUtils;

@@ -1,4 +1,4 @@
-package com.lee.collection;
+package com.usejava.collection;
 
 public class Student {
     private String name;

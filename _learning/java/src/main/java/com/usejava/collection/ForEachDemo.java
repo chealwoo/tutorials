@@ -4,7 +4,7 @@
  * Copyright (c)2011, Daniel Chealwoo Lee. All rights reserved. Use is subject to license terms.
  */
 
-package com.lee.collection;
+package com.usejava.collection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
