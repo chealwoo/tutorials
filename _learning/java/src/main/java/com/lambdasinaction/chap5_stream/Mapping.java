@@ -1,7 +1,7 @@
 package com.lambdasinaction.chap5_stream;
 
 import com.lambdasinaction.chap4.Dish;
-import lambdasinaction.chap4.*;
+import com.lambdasinaction.chap4.*;
 
 import java.util.*;
 import static java.util.stream.Collectors.toList;

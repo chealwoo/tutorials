@@ -1,7 +1,7 @@
 package com.lambdasinaction.appc;
 
 import com.lambdasinaction.chap6.Dish;
-import lambdasinaction.chap6.*;
+import com.lambdasinaction.chap6.*;
 
 import static java.util.stream.Collectors.*;
 import static com.lambdasinaction.chap6.Dish.menu;
