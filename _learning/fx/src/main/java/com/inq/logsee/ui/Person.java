@@ -1,4 +1,4 @@
-package tc.logsee.ui;
+package com.inq.logsee.ui;
 
 public class Person
 {

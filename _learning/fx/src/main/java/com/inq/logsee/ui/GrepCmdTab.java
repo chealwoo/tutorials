@@ -1,5 +1,5 @@
 // AddressTab.java
-package tc.logsee.ui;
+package com.inq.logsee.ui;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;

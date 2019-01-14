@@ -1,4 +1,4 @@
-package tc.logsee.ui;
+package com.inq.logsee.ui;
 
 import com.google.common.io.Resources;
 import javafx.collections.FXCollections;

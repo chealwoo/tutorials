@@ -1,4 +1,4 @@
-package me.com.matrix;
+package com.lee.matrix;
 
 /*
     A Matrix of two dimensional array of given size n [n][n]

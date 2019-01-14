@@ -1,4 +1,4 @@
-package tc.logsee.ui;
+package com.inq.logsee.ui;
 
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.stage.FileChooser;

@@ -1,5 +1,5 @@
 // TabSelection.java
-package tc.logsee.ui;
+package com.inq.logsee.ui;
 
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
