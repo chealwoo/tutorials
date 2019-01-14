@@ -1,13 +1,17 @@
-package cwl.mongodb;
+package cwl.db.mongodb;
 
 import com.mongodb.*;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 import java.util.Date;
 
 /**
  * http://www.mkyong.com/mongodb/java-mongodb-hello-world-example/
  */
-public class HelloMongoDb {
+public class HelloMongoDb32 {
     public static void main(String[] args) {
 
         try {
@@ -18,51 +22,51 @@ public class HelloMongoDb {
 
             /**** Get database ****/
             // if database doesn't exists, MongoDB will create it for you
-            DB db = mongo.getDB("testdb");
+            MongoDatabase db = mongo.getDatabase("testdb");
 
             /**** Get collection / table from 'testdb' ****/
             // if collection doesn't exists, MongoDB will create it for you
-            DBCollection table = db.getCollection("user");
+            MongoCollection<Document> user = db.getCollection("user");
 
             /**** Insert ****/
             // create a document to store key and value
-            BasicDBObject document = new BasicDBObject();
-            document.put("name", "mkyong");
+            Document document = new Document();
+            document.put("name", "daniel");
             document.put("age", 30);
             document.put("createdDate", new Date());
-            table.insert(document);
+            user.insertOne(document);
 
             /**** Find and display ****/
             BasicDBObject searchQuery = new BasicDBObject();
-            searchQuery.put("name", "mkyong");
+            searchQuery.put("name", "daniel");
 
-            DBCursor cursor = table.find(searchQuery);
+            FindIterable<Document> cursor = user.find(searchQuery);
 
-            while (cursor.hasNext()) {
-                System.out.println(cursor.next());
+            for (Document d: cursor) {
+                System.out.println(d);
             }
 
             /**** Update ****/
             // search document where name="mkyong" and update it with new values
             BasicDBObject query = new BasicDBObject();
-            query.put("name", "mkyong");
+            query.put("name", "daniel");
 
             BasicDBObject newDocument = new BasicDBObject();
-            newDocument.put("name", "mkyong-updated");
+            newDocument.put("name", "daniel-updated");
 
             BasicDBObject updateObj = new BasicDBObject();
             updateObj.put("$set", newDocument);
 
-            table.update(query, updateObj);
+            user.updateOne(query, updateObj);
 
             /**** Find and display ****/
             BasicDBObject searchQuery2
-                    = new BasicDBObject().append("name", "mkyong-updated");
+                    = new BasicDBObject().append("name", "daniel-updated");
 
-            DBCursor cursor2 = table.find(searchQuery2);
+            FindIterable<Document> cursor2 = user.find(searchQuery2);
 
-            while (cursor2.hasNext()) {
-                System.out.println(cursor2.next());
+            for (Document d: cursor2) {
+                System.out.println(d);
             }
 
             /**** Done ****/

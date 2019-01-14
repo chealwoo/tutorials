@@ -1,4 +1,4 @@
-package cwl.collection;
+package com.lee.collection;
 
 import com.google.common.collect.ImmutableMap;
 import org.apache.commons.lang3.ArrayUtils;

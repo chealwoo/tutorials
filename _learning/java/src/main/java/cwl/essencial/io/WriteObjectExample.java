@@ -15,7 +15,7 @@ ObjectOutputStream oos = new ObjectOutputStream(fout);
 oos.writeObject(address);
 
 
- * This class will write the “Address” object and it’s variable value (“wall street”, “united state”) into a file named “address.ser”, locate in c drive.
+ * This class will write the ?Address? object and it?s variable value (?wall street?, ?united state?) into a file named ?address.ser?, locate in c drive.
  *
  */
 public class WriteObjectExample {

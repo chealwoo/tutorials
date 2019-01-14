@@ -1,7 +1,7 @@
 /**
  *
  */
-package cwl.collection;
+package com.lee.collection;
 
 /*
  * http://www.java2s.com/Code/Java/Collections-Data-Structure/DemonstratetheHashtableclassandanEnumeration.htm

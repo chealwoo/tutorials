@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cwl.net;
+package cwl.net.url;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

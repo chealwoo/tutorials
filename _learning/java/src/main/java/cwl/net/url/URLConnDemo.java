@@ -1,4 +1,4 @@
-package cwl.net;
+package cwl.net.url;
 
 import java.net.*;
 import java.io.*;

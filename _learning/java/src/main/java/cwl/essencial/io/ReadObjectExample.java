@@ -16,7 +16,7 @@ FileInputStream fin = new FileInputStream("c:\\address.ser");
 ObjectInputStream ois = new ObjectInputStream(fin);
 address = (Address) ois.readObject();
 Deserializer.java
-This class will read a serialized file “c:\\address.ser” – created in this example, and convert it back to “Address” object and print out the saved value.
+This class will read a serialized file ï¿½c:\\address.serï¿½ ï¿½ created in this example, and convert it back to ï¿½Addressï¿½ object and print out the saved value.
 
  * @author dlee
  *

@@ -9,7 +9,7 @@
  * <p>
  * has unit test
  */
-package cwl.collection;
+package com.lee.collection;
 
 import model.user.User;
 

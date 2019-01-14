@@ -1,4 +1,4 @@
-package cwl.collection;
+package com.lee.collection;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,34 +9,34 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MapTestStringString {
+public class MapTestPrimString {
 
+	Map <Integer, String> testMap = null;
 	
 	@Before
 	public void setup() {
+		testMap = new HashMap<Integer, String> ();
 	}
 	
 	@After
 	public void teardown() {
+		testMap = null;
 	}
-
 
 	/**
 	 *  Test Auto-boxing.
 	 */
 	@Test 
-	public void mapTestDuplicatedString() {
+	public void mapTestDuplicatedKey() {
 		
-		Map <String, String> lTestMap = new HashMap <String, String> ();
-		
-		lTestMap.put("One", "One");
-		lTestMap.put("One", "One-1");
+		testMap.put(1, "One");
+		testMap.put(1, "One-1");
 
 		int iExpected = 1;
-		assertEquals(iExpected, lTestMap.size());
+		assertEquals(iExpected, testMap.size());
 
 		String sExpected = "One-1";
-		assertEquals(sExpected, lTestMap.get("One"));
+		assertEquals(sExpected, testMap.get(1));
 	}
 
 }

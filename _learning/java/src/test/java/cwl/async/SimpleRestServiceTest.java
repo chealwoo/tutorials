@@ -1,5 +1,6 @@
 package cwl.async;
 
+import cwl.net.sync.SimpleRestService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

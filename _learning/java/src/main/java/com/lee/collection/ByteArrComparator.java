@@ -4,7 +4,7 @@
  * ByteArrComparator.java - created on Aug 1, 2011 2:24:08 PM
  * Copyright (c)2011, Chealwoo Lee (Daniel). All rights reserved. Use is subject to license terms.
  */
-package cwl.collection;
+package com.lee.collection;
 
 import java.util.Comparator;
 

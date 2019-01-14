@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * 
  * http://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/
- * In Java, there are many ways to read a file, here we show you how to use the simplest and most common-used method – BufferedReader.
+ * In Java, there are many ways to read a file, here we show you how to use the simplest and most common-used method ï¿½ BufferedReader.
  * See updated example in JDK 7, which use try-with-resources new feature to close file automatically.
  * 
  * @author dlee
