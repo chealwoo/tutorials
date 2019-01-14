@@ -29,7 +29,7 @@
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.baeldung.sse.jaxrs.client.SseClientApp</mainClass>
+                            <mainClass>com.baeldung.sse.jaxrs.com.usejava.httpclient.SseClientApp</mainClass>
                         </configuration>
                     </execution>
                     <execution>
@@ -38,7 +38,7 @@
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.baeldung.sse.jaxrs.client.SseClientBroadcastApp</mainClass>
+                            <mainClass>com.baeldung.sse.jaxrs.com.usejava.httpclient.SseClientBroadcastApp</mainClass>
                         </configuration>
                     </execution>
                 </executions>

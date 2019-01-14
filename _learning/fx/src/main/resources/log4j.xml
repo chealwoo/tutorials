@@ -25,7 +25,7 @@
 	</appender>
 
 	<!-- File Appander for trace logs -->
-	<appender name="cob.service.sumo.file" class="org.apache.log4j.FileAppender">
+	<appender name="cob.com.lee.service.sumo.file" class="org.apache.log4j.FileAppender">
 		<param name="file" value="log/cobmonservice-sumo.log" />
 		<param name="append" value="false" />
 		<param name="threshold" value="trace" />
@@ -58,9 +58,9 @@
 		<level value="info" />
 	</logger>
 
-	<logger name="com.tc.cob.monitor.service.impl.sumo">
+	<logger name="com.tc.cob.monitor.com.lee.service.impl.sumo">
 		<level value="trace" />
-		<appender-ref ref="cob.service.sumo.file" />
+		<appender-ref ref="cob.com.lee.service.sumo.file" />
 	</logger>
 
 	<!-- Root Logger -->

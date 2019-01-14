@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.ejb.Local;
 
-import model.User;
+import com.lee.model.User;
 
 @Local
 public interface UserBeanLocal {

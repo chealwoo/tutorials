@@ -80,7 +80,7 @@
 
     <properties>
         <app.name>library</app.name>
-        <package.file>${project.build.directory}/${app.name}-service.jar</package.file>
+        <package.file>${project.build.directory}/${app.name}-com.lee.service.jar</package.file>
         <packaging.type>runnable</packaging.type>
         <microprofile.version>1.2</microprofile.version>
         <liberty-maven-plugin.version>2.1.2</liberty-maven-plugin.version>

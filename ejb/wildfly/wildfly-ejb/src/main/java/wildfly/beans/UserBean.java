@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import model.User;
+import com.lee.model.User;
 
 /**
  * Session Bean implementation class UserBean

@@ -35,7 +35,7 @@
                         <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Bundle-Activator>com.baeldung.osgi.sample.client.Client</Bundle-Activator>
+                        <Bundle-Activator>com.baeldung.osgi.sample.com.usejava.httpclient.Client</Bundle-Activator>
 
                         <Private-Package>com.baeldung.osgi.sample.client</Private-Package>
 

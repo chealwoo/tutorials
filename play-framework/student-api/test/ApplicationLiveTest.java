@@ -17,7 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
-import model.Student;
+import com.lee.model.Student;
 import play.test.*;
 import static play.test.Helpers.*;
 

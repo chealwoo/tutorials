@@ -11,7 +11,7 @@
  */
 package com.usejava.collection;
 
-import model.user.User;
+import com.lee.model.user.User;
 
 import java.util.Comparator;
 import java.util.Set;

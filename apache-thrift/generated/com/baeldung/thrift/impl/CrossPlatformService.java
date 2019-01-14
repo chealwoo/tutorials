@@ -198,7 +198,7 @@ public class CrossPlatformService {
           throw new java.lang.IllegalStateException("Method call not finished!");
         }
         org.apache.thrift.transport.TMemoryInputTransport memoryTransport = new org.apache.thrift.transport.TMemoryInputTransport(getFrameBuffer().array());
-        org.apache.thrift.protocol.TProtocol prot = client.getProtocolFactory().getProtocol(memoryTransport);
+        org.apache.thrift.protocol.TProtocol prot = com.usejava.httpclient.getProtocolFactory().getProtocol(memoryTransport);
         return (new Client(prot)).recv_get();
       }
     }
@@ -230,7 +230,7 @@ public class CrossPlatformService {
           throw new java.lang.IllegalStateException("Method call not finished!");
         }
         org.apache.thrift.transport.TMemoryInputTransport memoryTransport = new org.apache.thrift.transport.TMemoryInputTransport(getFrameBuffer().array());
-        org.apache.thrift.protocol.TProtocol prot = client.getProtocolFactory().getProtocol(memoryTransport);
+        org.apache.thrift.protocol.TProtocol prot = com.usejava.httpclient.getProtocolFactory().getProtocol(memoryTransport);
         return null;
       }
     }
@@ -259,7 +259,7 @@ public class CrossPlatformService {
           throw new java.lang.IllegalStateException("Method call not finished!");
         }
         org.apache.thrift.transport.TMemoryInputTransport memoryTransport = new org.apache.thrift.transport.TMemoryInputTransport(getFrameBuffer().array());
-        org.apache.thrift.protocol.TProtocol prot = client.getProtocolFactory().getProtocol(memoryTransport);
+        org.apache.thrift.protocol.TProtocol prot = com.usejava.httpclient.getProtocolFactory().getProtocol(memoryTransport);
         return (new Client(prot)).recv_getList();
       }
     }
@@ -288,7 +288,7 @@ public class CrossPlatformService {
           throw new java.lang.IllegalStateException("Method call not finished!");
         }
         org.apache.thrift.transport.TMemoryInputTransport memoryTransport = new org.apache.thrift.transport.TMemoryInputTransport(getFrameBuffer().array());
-        org.apache.thrift.protocol.TProtocol prot = client.getProtocolFactory().getProtocol(memoryTransport);
+        org.apache.thrift.protocol.TProtocol prot = com.usejava.httpclient.getProtocolFactory().getProtocol(memoryTransport);
         return (new Client(prot)).recv_ping();
       }
     }

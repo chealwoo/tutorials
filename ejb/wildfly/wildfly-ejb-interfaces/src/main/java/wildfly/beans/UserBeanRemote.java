@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.ejb.Remote;
 
-import model.User;
+import com.lee.model.User;
 
 @Remote
 public interface UserBeanRemote {

@@ -7,7 +7,7 @@
  */
 package cwl.learn.java.reflection;
 
-import model.user.User;
+import com.lee.model.user.User;
 import org.junit.Assert;
 import org.junit.Test;
 

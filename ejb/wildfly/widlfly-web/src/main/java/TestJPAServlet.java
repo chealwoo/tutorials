@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.transaction.UserTransaction;
 
-import model.User;
+import com.lee.model.User;
 
 /**
  * Servlet implementation class TestJPAServlet

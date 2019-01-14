@@ -9,15 +9,15 @@
         <div class="col-md-4">
             <b>Memory</b>
             <p><span>Total Memory</span> ({{vm.metrics.gauges['jvm.memory.total.used'].value / 1000000 | number:0}}M / {{vm.metrics.gauges['jvm.memory.total.max'].value / 1000000 | number:0}}M)</p>
-            <uib-progressbar min="0" max="vm.metrics.gauges['jvm.memory.total.max'].value" value="vm.metrics.gauges['jvm.memory.total.used'].value" class="progress-striped active" type="success">
+            <uib-progressbar min="0" max="vm.metrics.gauges['jvm.com.lee.memory.total.max'].value" value="vm.metrics.gauges['jvm.com.lee.memory.total.used'].value" class="progress-striped active" type="success">
                 <span>{{vm.metrics.gauges['jvm.memory.total.used'].value * 100 / vm.metrics.gauges['jvm.memory.total.max'].value  | number:0}}%</span>
             </uib-progressbar>
             <p><span>Heap Memory</span> ({{vm.metrics.gauges['jvm.memory.heap.used'].value / 1000000 | number:0}}M / {{vm.metrics.gauges['jvm.memory.heap.max'].value / 1000000 | number:0}}M)</p>
-            <uib-progressbar min="0" max="vm.metrics.gauges['jvm.memory.heap.max'].value" value="vm.metrics.gauges['jvm.memory.heap.used'].value" class="progress-striped active" type="success">
+            <uib-progressbar min="0" max="vm.metrics.gauges['jvm.com.lee.memory.heap.max'].value" value="vm.metrics.gauges['jvm.com.lee.memory.heap.used'].value" class="progress-striped active" type="success">
                 <span>{{vm.metrics.gauges['jvm.memory.heap.used'].value * 100 / vm.metrics.gauges['jvm.memory.heap.max'].value  | number:0}}%</span>
             </uib-progressbar>
             <p><span>Non-Heap Memory</span> ({{vm.metrics.gauges['jvm.memory.non-heap.used'].value / 1000000 | number:0}}M / {{vm.metrics.gauges['jvm.memory.non-heap.committed'].value / 1000000 | number:0}}M)</p>
-            <uib-progressbar min="0" max="vm.metrics.gauges['jvm.memory.non-heap.committed'].value" value="vm.metrics.gauges['jvm.memory.non-heap.used'].value" class="progress-striped active" type="success">
+            <uib-progressbar min="0" max="vm.metrics.gauges['jvm.com.lee.memory.non-heap.committed'].value" value="vm.metrics.gauges['jvm.com.lee.memory.non-heap.used'].value" class="progress-striped active" type="success">
                 <span>{{vm.metrics.gauges['jvm.memory.non-heap.used'].value * 100 / vm.metrics.gauges['jvm.memory.non-heap.committed'].value  | number:0}}%</span>
             </uib-progressbar>
         </div>

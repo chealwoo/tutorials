@@ -300,7 +300,7 @@ public class RegistrationListener implements ApplicationListener&lt;OnRegistrati
     private void confirmRegistration(OnRegistrationCompleteEvent event) {
         User user = event.getUser();
         String token = UUID.randomUUID().toString();
-        service.addVerificationToken(user, token);
+        com.lee.service.addVerificationToken(user, token);
         String recipientAddress = user.getEmail();
         String subject = &quot;Registration Confirmation&quot;;
         String confirmationUrl = event.getAppUrl() + &quot;/regitrationConfirm.html?token=&quot; + token;
@@ -325,16 +325,16 @@ public RegistrationController(IUserService service){
 @RequestMapping(value = &quot;/regitrationConfirm&quot;, method = RequestMethod.GET)
 public String confirmRegistration(WebRequest request, Model model, 
       @RequestParam(&quot;token&quot;) String token) {
-    VerificationToken verificationToken = service.getVerificationToken(token);
+    VerificationToken verificationToken = com.lee.service.getVerificationToken(token);
     if (verificationToken == null) {
-        model.addAttribute(&quot;message&quot;, messages.getMessage(&quot;auth.message.invalidToken&quot;, 
+        com.lee.model.addAttribute(&quot;message&quot;, messages.getMessage(&quot;auth.message.invalidToken&quot;,
           null, request.getLocale()));
         return &quot;redirect:/badUser.html?lang=&quot; + request.getLocale().getLanguage();
     }
     User user = verificationToken.getUser();
     Calendar cal = Calendar.getInstance();
     if (user == null) {
-        model.addAttribute(&quot;message&quot;, messages.getMessage(&quot;auth.message.invalidUser&quot;,
+        com.lee.model.addAttribute(&quot;message&quot;, messages.getMessage(&quot;auth.message.invalidUser&quot;,
           null, request.getLocale()));
         return &quot;redirect:/badUser.html?lang=&quot; + request.getLocale().getLanguage();
     }
@@ -343,7 +343,7 @@ public String confirmRegistration(WebRequest request, Model model,
     } else {
         user.setEnabled(true);
     }
-    service.saveRegisteredUser(user);
+    com.lee.service.saveRegisteredUser(user);
     return &quot;redirect:/login.html?lang=&quot; + request.getLocale().getLanguage();
 }</pre>
 <p>Notice that if there is no user associated with the <em>VerificationToken</em> or if the <em>VerificationToken</em> does not exist, the controller will return a<em> badUser.html</em> page with the corresponding error message (See Example 3.3.2.).</p>
@@ -399,7 +399,7 @@ public UserDetails loadUserByUsername(String email) throws UsernameNotFoundExcep
         }
         if (!user.isEnabled()) {
             accountNonExpired = false;
-            service.deleteUser(user);
+            com.lee.service.deleteUser(user);
             return new org.springframework.security.core.userdetails.User(&quot; &quot;, &quot; &quot;, enabled, 
               accountNonExpired, true, true, getAuthorities(new Integer(1)));
         }

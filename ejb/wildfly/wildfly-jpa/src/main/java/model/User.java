@@ -1,4 +1,4 @@
-package model;
+package com.lee.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -40,7 +40,7 @@
     <bean id="recordMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="classesToBeBound">
             <list>
-                <value>org.baeldung.batch.model.Transaction</value>
+                <value>org.baeldung.batch.com.lee.model.Transaction</value>
             </list>
         </property>
     </bean>

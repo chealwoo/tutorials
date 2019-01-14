@@ -12,7 +12,7 @@
     <!-- Declare GemFire Cache -->
     <gfe:cache/>
     <!-- Local region for being used by the Message -->
-    <gfe:local-region id="employee" value-constraint="com.baeldung.spring.data.gemfire.model.Employee" data-policy="PRELOADED"/>
+    <gfe:local-region id="employee" value-constraint="com.baeldung.spring.data.gemfire.com.lee.model.Employee" data-policy="PRELOADED"/>
     <!-- Search for GemFire repositories -->
     <gfe-data:repositories base-package="com.baeldung.spring.data.gemfire.repository"/>
 

@@ -462,47 +462,47 @@ public class SpringTest{
       <title><anchor xml:id="dbdoclet.5_The_Controller"/><emphasis role="bold">5. The Controller</emphasis></title>
       <para>The <emphasis role="bold">@Controller</emphasis> is the central artifact in the entire Web Tier of the RESTful API. For the purpose of this post, the controller is modeling a simple REST resource – <emphasis>Foo</emphasis>:</para>
       <screen>@Controller
-@RequestMapping( value = &quot;/foos&quot; )
-class FooController{
+          @RequestMapping( value = &quot;/foos&quot; )
+          class FooController{
 
-   @Autowired
-   IFooService service;
+          @Autowired
+          IFooService service;
 
-   @RequestMapping( method = RequestMethod.GET )
-   @ResponseBody
-   public List&lt; Foo &gt; findAll(){
-      return service.findAll();
-   }
+          @RequestMapping( method = RequestMethod.GET )
+          @ResponseBody
+          public List&lt; Foo &gt; findAll(){
+          return com.lee.service.findAll();
+          }
 
-   @RequestMapping( value = &quot;/{id}&quot;, method = RequestMethod.GET )
-   @ResponseBody
-   public Foo findOne( @PathVariable( &quot;id&quot; ) Long id ){
-      return RestPreconditions.checkFound( service.findOne( id ) );
-   }
+          @RequestMapping( value = &quot;/{id}&quot;, method = RequestMethod.GET )
+          @ResponseBody
+          public Foo findOne( @PathVariable( &quot;id&quot; ) Long id ){
+          return RestPreconditions.checkFound( com.lee.service.findOne( id ) );
+          }
 
-   @RequestMapping( method = RequestMethod.POST )
-   @ResponseStatus( HttpStatus.CREATED )
-   @ResponseBody
-   public Long create( @RequestBody Foo resource ){
-      Preconditions.checkNotNull( resource );
-      return service.create( resource );
-   }
+          @RequestMapping( method = RequestMethod.POST )
+          @ResponseStatus( HttpStatus.CREATED )
+          @ResponseBody
+          public Long create( @RequestBody Foo resource ){
+          Preconditions.checkNotNull( resource );
+          return com.lee.service.create( resource );
+          }
 
-   @RequestMapping( value = &quot;/{id}&quot;, method = RequestMethod.PUT )
-   @ResponseStatus( HttpStatus.OK )
-   public void update( @PathVariable( &quot;id&quot; ) Long id, @RequestBody Foo resource ){
-      Preconditions.checkNotNull( resource );
-      RestPreconditions.checkNotNull( service.getById( resource.getId() ) );
-      service.update( resource );
-   }
+          @RequestMapping( value = &quot;/{id}&quot;, method = RequestMethod.PUT )
+          @ResponseStatus( HttpStatus.OK )
+          public void update( @PathVariable( &quot;id&quot; ) Long id, @RequestBody Foo resource ){
+          Preconditions.checkNotNull( resource );
+          RestPreconditions.checkNotNull( com.lee.service.getById( resource.getId() ) );
+          com.lee.service.update( resource );
+          }
 
-   @RequestMapping( value = &quot;/{id}&quot;, method = RequestMethod.DELETE )
-   @ResponseStatus( HttpStatus.OK )
-   public void delete( @PathVariable( &quot;id&quot; ) Long id ){
-      service.deleteById( id );
-   }
+          @RequestMapping( value = &quot;/{id}&quot;, method = RequestMethod.DELETE )
+          @ResponseStatus( HttpStatus.OK )
+          public void delete( @PathVariable( &quot;id&quot; ) Long id ){
+          com.lee.service.deleteById( id );
+          }
 
-}</screen>
+          }</screen>
       <para>You may have noticed I’m using a very simple, guava style <emphasis>RestPreconditions</emphasis> utility:</para>
       <screen>public class RestPreconditions {
     public static &lt;T&gt; T checkFound(final T resource) {
@@ -517,7 +517,8 @@ class FooController{
     </section>
     <section xml:id="http-codes.1">
       <title><anchor xml:id="dbdoclet.6_Mapping_the_HTTP_response_codes"/><emphasis role="bold">6. Mapping the HTTP response codes</emphasis></title>
-      <para>The status codes of the HTTP response are one of the most important parts of the REST service, and the subject can quickly become very complex. Getting these right can be what makes or breaks the service.</para>
+      <para>The status codes of the HTTP response are one of the most important parts of the REST service, and the
+          subject can quickly become very complex. Getting these right can be what makes or breaks the com.lee.service.</para>
       <section xml:id="ch_6_1.1">
         <title><emphasis role="bold">6.1. Unmapped requests</emphasis></title>
         <para>If Spring MVC receives a request which doesn’t have a mapping, it considers the request not to be allowed and returns a <emphasis role="bold">405 METHOD NOT ALLOWED</emphasis> back to the client. It is also good practice to include the <emphasis role="bold">Allow HTTP header</emphasis> when returning a <emphasis>405</emphasis> to the client, in order to specify which operations <emphasis role="bold">are</emphasis> allowed. This is the standard behavior of Spring MVC and does not require any additional configuration.</para>
@@ -1560,7 +1561,9 @@ End Shortcoder content
     </section>
     <section xml:id="both.1">
       <title><anchor xml:id="dbdoclet.4_Supporting_both_authentication_protocols_in_the_same_RESTful_service"/><emphasis role="bold">4. Supporting both authentication protocols in the same RESTful service</emphasis></title>
-      <para>Basic or Digest authentication alone can be easily implemented in Spring Security 3.x; it is supporting both of them for the same RESTful web service, on the same URI mappings that introduces a new level of complexity into the configuration and testing of the service.</para>
+      <para>Basic or Digest authentication alone can be easily implemented in Spring Security 3.x; it is supporting both
+          of them for the same RESTful web service, on the same URI mappings that introduces a new level of complexity
+          into the configuration and testing of the com.lee.service.</para>
       <section xml:id="ch_4_1.1">
         <title><emphasis role="bold">4.1. Anonymous request</emphasis></title>
         <para>With both basic and digest filters in the security chain, the way a <emphasis role="bold">anonymous request</emphasis> – a request containing no authentication credentials (<emphasis>Authorization</emphasis> HTTP header) – is processed by Spring Security is – the two authentication filters will find <emphasis role="bold">no credentials</emphasis> and will continue execution of the filter chain. Then, seeing how the request wasn’t authenticated, an <emphasis>AccessDeniedException</emphasis> is thrown and caught in the <emphasis>ExceptionTranslationFilter</emphasis>, which commences the digest entry point, prompting the client for credentials.</para>
