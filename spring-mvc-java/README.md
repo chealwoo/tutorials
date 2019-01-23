@@ -11,7 +11,6 @@ The "REST With Spring" Classes: http://bit.ly/restwithspring
 - [Introduction to Advice Types in Spring](http://www.baeldung.com/spring-aop-advice-tutorial)
 - [A Guide to the ViewResolver in Spring MVC](http://www.baeldung.com/spring-mvc-view-resolver-tutorial)
 - [Integration Testing in Spring](http://www.baeldung.com/integration-testing-in-spring)
-- [Spring JSON-P with Jackson](http://www.baeldung.com/spring-jackson-jsonp)
 - [A Quick Guide to Spring MVC Matrix Variables](http://www.baeldung.com/spring-mvc-matrix-variables)
 - [Intro to WebSockets with Spring](http://www.baeldung.com/websockets-spring)
 - [File Upload with Spring MVC](http://www.baeldung.com/spring-file-upload)
@@ -32,3 +31,4 @@ The "REST With Spring" Classes: http://bit.ly/restwithspring
 - [Using Spring @ResponseStatus to Set HTTP Status Code](http://www.baeldung.com/spring-response-status)
 - [Bootstrap a Web Application with Spring 5](https://www.baeldung.com/bootstraping-a-web-application-with-spring-and-java-based-configuration)
 - [Spring MVC Tutorial](https://www.baeldung.com/spring-mvc-tutorial)
+- [Working with Date Parameters in Spring](https://www.baeldung.com/spring-date-parameters)
