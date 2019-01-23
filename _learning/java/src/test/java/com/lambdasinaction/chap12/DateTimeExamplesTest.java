@@ -15,9 +15,23 @@ import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class DateTimeExamplesTest {
 
+    @Test
+    public void localDateTimeTest_basic() throws Exception {
+        LocalDateTime timeoutTime1 = LocalDateTime.of(2019, Month.APRIL, 8, 12, 30, 40, 123);
+        LocalDateTime timeoutTime2 = LocalDateTime.of(2019, Month.APRIL, 8, 12, 30, 41, 123);
+        assertTrue(Duration.between(timeoutTime1, timeoutTime2).toMillis() == 1000);
+    }
+
+    @Test
+    public void localDateTimeTest_changeDate() throws Exception {
+        LocalDateTime timeoutTime1 = LocalDateTime.of(2019, Month.APRIL, 8, 23, 59, 58, 123);
+        LocalDateTime timeoutTime2 = LocalDateTime.of(2019, Month.APRIL, 9, 0, 1, 41, 123);
+        assertTrue(Duration.between(timeoutTime1, timeoutTime2).toMillis() == 103000);
+    }
 
     @Test
     public void useLocalDateTimeDurationTest() {

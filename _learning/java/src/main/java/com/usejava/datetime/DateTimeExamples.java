@@ -48,6 +48,18 @@ public class DateTimeExamples {
         useDateFormatter();
     }
 
+    private static long getCurrentTime() {
+        Instant instant = Instant.now();
+        return instant.toEpochMilli();
+    }
+
+
+    private static Instant getInstantFromLong() {
+        Instant instant = Instant.ofEpochMilli(getCurrentTime());
+        return instant;
+    }
+
+
     private static void useOldDate() {
         Date date = new Date(114, 2, 18);
         System.out.println(date);
