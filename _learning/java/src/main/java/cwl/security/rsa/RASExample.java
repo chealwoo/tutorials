@@ -65,8 +65,6 @@ public class RASExample {
             System.out.println("Signature Output : ");
             System.out.println("\t" + new String(Base64.encode(signature)));
 
-
-
             // Message Digest
             String hashingAlgorithm = "SHA-256";
             MessageDigest messageDigestProvider = null;

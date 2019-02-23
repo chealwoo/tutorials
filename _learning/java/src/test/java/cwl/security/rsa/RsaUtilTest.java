@@ -16,6 +16,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
+/**
+ * Generates new key pair
+ */
 public class RsaUtilTest {
 
     KeyPair keyPair;
