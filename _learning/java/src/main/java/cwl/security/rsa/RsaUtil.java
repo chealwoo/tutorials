@@ -2,6 +2,7 @@ package cwl.security.rsa;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.Base64Utils;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -100,8 +101,7 @@ public class RsaUtil {
         return encoder.encode(publicKeyBytes);
     }
 
-
-    public static void savePublicKey() throws NoSuchAlgorithmException, IOException {
+    public static void savePublicKey(String fileName) throws NoSuchAlgorithmException, IOException {
         KeyPair key = buildKeyPair();
         PublicKey publicKey = key.getPublic();
         byte[] encodedPublicKey = publicKey.getEncoded();
@@ -109,16 +109,17 @@ public class RsaUtil {
 
         try (OutputStreamWriter publicKeyWriter =
                      new OutputStreamWriter(
-                             new FileOutputStream(PUBLIC_KEY_FILE),
-                             StandardCharsets.US_ASCII.newEncoder())) {
+                             new FileOutputStream(fileName),
+                             StandardCharsets.UTF_8.newEncoder())) {
             publicKeyWriter.write(b64PublicKey);
         }
     }
 
     static BASE64Encoder encoder = new BASE64Encoder();
-    public static String publicKeyToUTF8String(PublicKey p) {
+    public static String publicKeyToEncodeToUrlSafeString(PublicKey p) {
         byte[] publicKeyBytes = p.getEncoded();
-        return encoder.encode(publicKeyBytes);
+
+        return Base64Utils.encodeToUrlSafeString(publicKeyBytes);
     }
 
     public static String privateKeyToString(PrivateKey p) {
