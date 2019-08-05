@@ -17,6 +17,7 @@ public class LogAnaysisApp extends Application {
 
 	@Override
 	public void start(Stage stage) {
+
 		LogViewTab logViewTab = new LogViewTab("Log View", null, stage);
 		GrepCmdTab grepBuildTab = new GrepCmdTab("grep build", null);
 
@@ -61,4 +62,5 @@ public class LogAnaysisApp extends Application {
 		System.out.println("Selection changed event for " + tab.getText() + 
 		                   " tab, selected = " + tab.isSelected());
 	}
+
 }

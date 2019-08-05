@@ -21,16 +21,17 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.table.TableFilter;
-import tc.logsee.model.LogLine;
+//import tc.logsee.model.LogLine;
 
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 
-public class FxLogExample1 extends Application {
+public class FxLogExample1 { /*extends Application {
+
     public static void main(String[] args) {
         Application.launch(args);
     }
-
+/*
     private static String lastVisitedDirectory = System.getProperty("user.home");
     private TableFilter filter;
     // Define the Text Fields
@@ -270,4 +271,6 @@ public class FxLogExample1 extends Application {
             column.setPrefWidth(max + 10.0d);
         });
     }
+}
+*/
 }

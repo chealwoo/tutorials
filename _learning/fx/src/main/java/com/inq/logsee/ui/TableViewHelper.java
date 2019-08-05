@@ -95,5 +95,4 @@ public class TableViewHelper
         return ClazzCol;
     }
 
-
 }

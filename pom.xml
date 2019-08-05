@@ -590,7 +590,7 @@
 				<module>spring-security-mvc-socket</module>
 				<module>spring-security-openid</module>
 				<!--<module>spring-security-react</module> -->
-                                <exclude>**/*JdbcTest.java</exclude>
+                                <!--<exclude>**/*JdbcTest.java</exclude>-->
 				<module>spring-security-rest-custom</module>
 				<module>spring-security-rest</module>
 				<module>spring-security-sso</module>
