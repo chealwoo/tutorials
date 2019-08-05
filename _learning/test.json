@@ -1,0 +1,38 @@
+{
+  "tevent": {
+    "eventid": "1001",
+    "eventName": "EventButtonClicked",
+    "timestamp": "01/04/2017 01:02:2017",
+    "connid": "-3725783320037621719"
+  },
+  "channel": [
+    {
+      "type": "chat",
+      "vendor": "nuance",
+      "agentid": "Arnab.Dan@wellsfargo.com",
+      "userid": "Arnab.Dan@wellsfargo.com"
+    }
+  ],
+  "kvp": [
+    {
+      "key": "ecda_connid",
+      "value": "-3739294078790043269 "
+    },
+    {
+      "key": "ecda_ECN",
+      "value": "1234567890"
+    },
+    {
+      "key": "ecda_ApplId",
+      "value": "MSNGR"
+    },
+    {
+      "key": "ecda_AuthType",
+      "value": "XA"
+    },
+    {
+      "key": "isCustomerEngagementSessionActive",
+      "value": "true"
+    }
+  ]
+}

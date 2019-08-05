@@ -2,6 +2,7 @@ package cwl.security.rsa;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.Base64Utils;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -96,8 +97,11 @@ public class RsaUtil {
      */
     public static String publicKeyToString(PublicKey p) {
         byte[] publicKeyBytes = p.getEncoded();
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(publicKeyBytes);
+
+        return Base64Utils.encodeToUrlSafeString(publicKeyBytes);
+
+//        BASE64Encoder encoder = new BASE64Encoder();
+//        return encoder.encode(publicKeyBytes);
     }
 
 
@@ -145,7 +149,6 @@ public class RsaUtil {
 
         try {
             c = decoder.decodeBuffer(s);
-            keyFact = KeyFactory.getInstance("RSA");
         } catch (Exception e) {
             LOG.error("Error in Keygen for {}", e.getMessage(), e);
             e.printStackTrace();
@@ -153,6 +156,9 @@ public class RsaUtil {
 
         X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(c);
         try {
+//            keyFact = KeyFactory.getInstance("RSA");
+//            keyFact = KeyFactory.getInstance("DSA");
+            keyFact = KeyFactory.getInstance("DiffieHellman");
             returnKey = keyFact.generatePublic(x509KeySpec);
         } catch (Exception e) {
             LOG.error("Error in Keygen for {}", e.getMessage(), e);
@@ -229,4 +235,26 @@ public class RsaUtil {
         return cipher.doFinal(encrypted, 0, 256);
 //        return cipher.doFinal(encrypted, 0, 128);
     }
+
+    /*
+
+    https://www.programcreek.com/java-api-examples/java.security.PublicKey
+
+
+        // Store Public Key
+    final File publicKeyFile = getKeyPath(publicKey);
+    publicKeyFile.getParentFile().mkdirs(); // make directories if they do not exist
+    final X509EncodedKeySpec x509EncodedKeySpec = new X509EncodedKeySpec(publicKey.getEncoded());
+    try (FileOutputStream fos = new FileOutputStream(publicKeyFile)) {
+        fos.write(x509EncodedKeySpec.getEncoded());
+    }
+
+    // Store Private Key.
+    final File privateKeyFile = getKeyPath(privateKey);
+    privateKeyFile.getParentFile().mkdirs(); // make directories if they do not exist
+    final PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(privateKey.getEncoded());
+    try (FileOutputStream fos = new FileOutputStream(privateKeyFile)) {
+        fos.write(pkcs8EncodedKeySpec.getEncoded());
+    }
+     */
 }
